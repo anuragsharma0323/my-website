@@ -1,0 +1,914 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anurag - Field Engineer</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h2 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+
+        /* HOME */
+
+        .home {
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background: white;
+        }
+
+        .home-content {
+            max-width: 750px;
+        }
+
+        .welcome {
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .home h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .home h1 span {
+            color: #2563eb;
+        }
+
+        .home h2 {
+            font-size: 25px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .home p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .home-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+
+        .btn-outline:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+
+        /* ABOUT */
+
+        .about {
+            padding: 80px 8%;
+            background: #f5f7fa;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .about-text h3 {
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+
+        /* SKILLS */
+
+        .skills {
+            padding: 80px 8%;
+            background: white;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .skills-intro {
+            color: #666;
+            margin-bottom: 45px;
+        }
+
+        .skills-container {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .skill {
+            margin-bottom: 25px;
+        }
+
+        .skill h3 {
+            margin-bottom: 10px;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 12px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: #2563eb;
+            border-radius: 10px;
+        }
+
+
+        /* EXPERIENCE */
+
+        .experience {
+            padding: 80px 8%;
+            background: #f5f7fa;
+            text-align: center;
+        }
+
+        .experience h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .experience-intro {
+            color: #666;
+            margin-bottom: 45px;
+        }
+
+        .experience-container {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .experience-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            text-align: left;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .experience-icon {
+            font-size: 40px;
+        }
+
+        .experience-card h3 {
+            margin-bottom: 10px;
+            color: #2563eb;
+        }
+
+        .experience-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+
+        /* SERVICES */
+
+        .services {
+            padding: 80px 8%;
+            background: white;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .services-intro {
+            max-width: 650px;
+            margin: 0 auto 45px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 280px;
+            padding: 30px;
+            background: #f5f7fa;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #2563eb;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            padding: 80px 8%;
+            background: #f5f7fa;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contact-intro {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 45px;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .contact-card {
+            width: 280px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 11px 22px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #1d4ed8;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 14px;
+            }
+
+            .home h1 {
+                font-size: 40px;
+            }
+
+            .home h2 {
+                font-size: 20px;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-image img {
+                width: 220px;
+                height: 220px;
+            }
+
+            .experience-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h2>Anurag</h2>
+
+        <nav>
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HOME -->
+
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <p class="welcome">
+                WELCOME TO MY WEBSITE
+            </p>
+
+            <h1>
+                Hi, I'm <span>Anurag</span>
+            </h1>
+
+            <h2>
+                Field Engineer & Technical Support Specialist
+            </h2>
+
+            <p>
+                I provide professional technical support for
+                Interactive Flat Panels, OPS systems,
+                installation and troubleshooting.
+            </p>
+
+            <div class="home-buttons">
+
+                <a href="#services" class="btn">
+                    View My Services
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div class="about-content">
+
+            <div class="about-image">
+
+                <img src="profile.jpg" alt="Anurag">
+
+            </div>
+
+            <div class="about-text">
+
+                <h2>About Me</h2>
+
+                <h3>Field Engineer</h3>
+
+                <p>
+                    Hello, I am Anurag, a Field Engineer specializing
+                    in Interactive Flat Panels, OPS systems and
+                    technical support.
+                </p>
+
+                <p>
+                    I work on installation, troubleshooting,
+                    maintenance and technical support for smart
+                    interactive displays.
+                </p>
+
+                <p>
+                    My goal is to provide reliable and professional
+                    technical solutions to customers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section class="skills" id="skills">
+
+        <h2>My Skills</h2>
+
+        <p class="skills-intro">
+            My technical skills and areas of expertise.
+        </p>
+
+        <div class="skills-container">
+
+            <div class="skill">
+
+                <h3>IFP Troubleshooting</h3>
+
+                <div class="skill-bar">
+
+                    <div class="skill-progress" style="width: 90%;"></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>OPS Troubleshooting</h3>
+
+                <div class="skill-bar">
+
+                    <div class="skill-progress" style="width: 85%;"></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>Windows Support</h3>
+
+                <div class="skill-bar">
+
+                    <div class="skill-progress" style="width: 85%;"></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>Installation & Setup</h3>
+
+                <div class="skill-bar">
+
+                    <div class="skill-progress" style="width: 90%;"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section class="experience" id="experience">
+
+        <h2>My Experience</h2>
+
+        <p class="experience-intro">
+            My professional work and technical experience.
+        </p>
+
+        <div class="experience-container">
+
+            <div class="experience-card">
+
+                <div class="experience-icon">
+                    🖥️
+                </div>
+
+                <div>
+
+                    <h3>
+                        Interactive Flat Panel Support
+                    </h3>
+
+                    <p>
+                        Troubleshooting and technical support for
+                        Interactive Flat Panels, including display,
+                        touch, firmware and Android-related issues.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <div class="experience-icon">
+                    💻
+                </div>
+
+                <div>
+
+                    <h3>
+                        OPS & Windows Support
+                    </h3>
+
+                    <p>
+                        Handling OPS hardware and Windows-related
+                        issues including SSD, RAM, BIOS, boot and
+                        operating system troubleshooting.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <div class="experience-icon">
+                    🔧
+                </div>
+
+                <div>
+
+                    <h3>
+                        Installation & Maintenance
+                    </h3>
+
+                    <p>
+                        Experience in interactive display installation,
+                        configuration, testing and technical maintenance.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="services" id="services">
+
+        <h2>My Services</h2>
+
+        <p class="services-intro">
+            I provide technical support and solutions for
+            Interactive Flat Panels and OPS systems.
+        </p>
+
+        <div class="service-container">
+
+            <div class="card">
+
+                <div class="icon">
+                    🖥️
+                </div>
+
+                <h3>
+                    IFP Service
+                </h3>
+
+                <p>
+                    Interactive Flat Panel troubleshooting,
+                    display issues, touch problems and technical support.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    💻
+                </div>
+
+                <h3>
+                    OPS Support
+                </h3>
+
+                <p>
+                    Windows, SSD, RAM, BIOS, boot and
+                    other OPS hardware and software troubleshooting.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🔧
+                </div>
+
+                <h3>
+                    Installation
+                </h3>
+
+                <p>
+                    Interactive display installation,
+                    configuration, testing and setup.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🛠️
+                </div>
+
+                <h3>
+                    Maintenance
+                </h3>
+
+                <p>
+                    Technical maintenance, inspection and
+                    troubleshooting of smart interactive displays.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <h2>
+            Let's Connect
+        </h2>
+
+        <p class="contact-intro">
+            If you need technical support, installation or service,
+            feel free to contact me.
+        </p>
+
+        <div class="contact-container">
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📞
+                </div>
+
+                <h3>
+                    Call Me
+                </h3>
+
+                <p>
+                    Let's discuss your requirement.
+                </p>
+
+                <a href="tel:+918112358495"
+                   class="contact-btn">
+                    Call Now
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    💬
+                </div>
+
+                <h3>
+                    WhatsApp
+                </h3>
+
+                <p>
+                    Send me a message on WhatsApp.
+                </p>
+
+                <a href="https://wa.me/918112358495"
+                   class="contact-btn"
+                   target="_blank">
+                    WhatsApp Me
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📧
+                </div>
+
+                <h3>
+                    Email
+                </h3>
+
+                <p>
+                    Send me an email for enquiries.
+                </p>
+
+                <a href="mailto sharmaanurag0323@email.com"
+                   class="contact-btn">
+                    Email Me
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Anurag. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
