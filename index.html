@@ -2,11 +2,13 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Anurag - Field Engineer</title>
+    <title>The Shutter Up Studios | Wedding Photography</title>
+
+    <meta name="description"
+        content="The Shutter Up Studios - Wedding Photography, Cinematic Films, Pre-Wedding and Event Photography in Lucknow.">
 
     <style>
 
@@ -21,88 +23,100 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #222;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0c0c0c;
+            color: #fff;
+            line-height: 1.6;
         }
 
         /* HEADER */
 
         header {
-            background: #111827;
-            color: white;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            background: rgba(10, 10, 10, 0.96);
+            border-bottom: 1px solid #292929;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        header h2 {
-            font-size: 24px;
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #d4af37;
         }
 
         nav a {
-            color: white;
+            color: #fff;
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 16px;
+            margin-left: 22px;
+            font-size: 15px;
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #60a5fa;
+            color: #d4af37;
         }
 
-        /* HOME */
+        /* HERO */
 
-        .home {
-            min-height: 85vh;
+        .hero {
+            min-height: 90vh;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 50px 20px;
-            background: white;
+            padding: 80px 20px;
+            background:
+                linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.88)),
+                radial-gradient(circle at center, #493b19, #080808 65%);
         }
 
-        .home-content {
-            max-width: 850px;
+        .hero-content {
+            max-width: 900px;
         }
 
-        .welcome {
-            color: #2563eb;
+        .hero-small {
+            color: #d4af37;
             font-size: 14px;
+            letter-spacing: 4px;
             font-weight: bold;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
-
-        .home h1 {
-            font-size: 55px;
-            margin-bottom: 10px;
-        }
-
-        .home h1 span {
-            color: #2563eb;
-        }
-
-        .home h2 {
-            font-size: 25px;
             margin-bottom: 20px;
-            color: #444;
         }
 
-        .home p {
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 65px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #d4af37;
+        }
+
+        .hero h2 {
+            font-size: 23px;
+            font-weight: normal;
+            color: #ddd;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            color: #bbb;
             font-size: 18px;
-            line-height: 1.7;
-            color: #555;
-            margin-bottom: 30px;
+            max-width: 700px;
+            margin: auto auto 35px;
         }
 
-        .home-buttons {
+        .buttons {
             display: flex;
             justify-content: center;
             gap: 15px;
@@ -111,194 +125,224 @@
 
         .btn {
             display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 13px 25px;
-            border-radius: 6px;
+            padding: 14px 28px;
+            background: #d4af37;
+            color: #111;
             text-decoration: none;
-            font-size: 16px;
+            border-radius: 5px;
+            font-weight: bold;
             transition: 0.3s;
         }
 
         .btn:hover {
-            background: #1d4ed8;
+            transform: translateY(-3px);
+            background: #f0cf62;
         }
 
         .btn-outline {
             background: transparent;
-            color: #2563eb;
-            border: 2px solid #2563eb;
+            color: #d4af37;
+            border: 1px solid #d4af37;
         }
 
         .btn-outline:hover {
-            background: #2563eb;
-            color: white;
+            color: #111;
+            background: #d4af37;
+        }
+
+        /* COMMON SECTION */
+
+        section {
+            padding: 90px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title small {
+            color: #d4af37;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .section-title h2 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            margin: 10px 0;
+        }
+
+        .section-title p {
+            color: #999;
+            max-width: 700px;
+            margin: auto;
         }
 
         /* ABOUT */
 
         .about {
-            padding: 80px 8%;
-            background: #f5f7fa;
+            background: #111;
         }
 
         .about-content {
             max-width: 1000px;
             margin: auto;
-            display: flex;
-            align-items: center;
-            gap: 50px;
+            text-align: center;
         }
 
-        .about-image img {
-            width: 280px;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-text h2 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .about-text h3 {
-            color: #2563eb;
+        .about-content h3 {
+            color: #d4af37;
+            font-size: 25px;
             margin-bottom: 20px;
         }
 
-        .about-text p {
-            line-height: 1.7;
-            margin-bottom: 15px;
-            color: #555;
-        }
-
-        /* SKILLS */
-
-        .skills {
-            padding: 80px 8%;
-            background: white;
-            text-align: center;
-        }
-
-        .skills h2 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .skills-intro {
-            color: #666;
-            margin-bottom: 45px;
-        }
-
-        .skills-container {
+        .about-content p {
+            color: #bbb;
             max-width: 800px;
+            margin: 0 auto 15px;
+            font-size: 17px;
+        }
+
+        /* PACKAGES */
+
+        .packages {
+            background: #080808;
+        }
+
+        .package-container {
+            max-width: 1150px;
             margin: auto;
-            text-align: left;
-        }
-
-        .skill {
-            margin-bottom: 25px;
-        }
-
-        .skill h3 {
-            margin-bottom: 10px;
-        }
-
-        .skill-bar {
-            width: 100%;
-            height: 12px;
-            background: #e5e7eb;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .skill-progress {
-            height: 100%;
-            background: #2563eb;
-            border-radius: 10px;
-        }
-
-        /* EXPERIENCE */
-
-        .experience {
-            padding: 80px 8%;
-            background: #f5f7fa;
-            text-align: center;
-        }
-
-        .experience h2 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .experience-intro {
-            color: #666;
-            margin-bottom: 45px;
-        }
-
-        .experience-container {
-            max-width: 900px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .experience-card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            display: flex;
-            align-items: flex-start;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            text-align: left;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .package-card {
+            background: #151515;
+            border: 1px solid #2d2d2d;
+            border-radius: 12px;
+            padding: 35px 28px;
+            text-align: center;
+            position: relative;
             transition: 0.3s;
         }
 
-        .experience-card:hover {
-            transform: translateY(-5px);
+        .package-card:hover {
+            transform: translateY(-8px);
+            border-color: #d4af37;
         }
 
-        .experience-icon {
+        .popular {
+            border: 1px solid #d4af37;
+        }
+
+        .popular-label {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #d4af37;
+            color: #111;
+            padding: 5px 18px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .package-card h3 {
+            color: #d4af37;
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .package-card h4 {
+            color: #aaa;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .package-card ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .package-card li {
+            padding: 10px 0;
+            border-bottom: 1px solid #292929;
+            color: #ccc;
+        }
+
+        .package-card li::before {
+            content: "✓";
+            color: #d4af37;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* EVENT SECTION */
+
+        .event-section {
+            background: #111;
+        }
+
+        .event-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .event-title h2 {
+            font-family: Georgia, serif;
             font-size: 40px;
         }
 
-        .experience-card h3 {
-            margin-bottom: 10px;
-            color: #2563eb;
+        .event-title p {
+            color: #999;
         }
 
-        .experience-card p {
-            color: #555;
-            line-height: 1.6;
+        /* PRE WEDDING */
+
+        .prewedding {
+            background: #080808;
         }
 
-        /* WORK */
-
-        .work {
-            padding: 80px 8%;
-            background: white;
-            text-align: center;
+        .locations {
+            max-width: 1000px;
+            margin: 0 auto 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
-        .work h2 {
-            font-size: 38px;
-            margin-bottom: 15px;
+        .location-card {
+            min-height: 180px;
+            border-radius: 10px;
+            padding: 25px;
+            display: flex;
+            align-items: flex-end;
+            background:
+                linear-gradient(transparent, rgba(0,0,0,.9)),
+                linear-gradient(135deg, #6b5730, #171717);
+            border: 1px solid #333;
         }
 
-        .work-intro {
-            color: #666;
-            margin-bottom: 45px;
-            font-size: 18px;
+        .location-card h3 {
+            color: #fff;
         }
 
-        .work-container {
+        /* DELIVERABLES */
+
+        .deliverables {
+            background: #111;
+        }
+
+        .deliverable-container {
             max-width: 1100px;
             margin: auto;
             display: grid;
@@ -306,168 +350,149 @@
             gap: 25px;
         }
 
-        .work-card {
-            background: #f5f7fa;
+        .deliverable-card {
+            background: #171717;
+            border: 1px solid #2c2c2c;
             border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
-
-        .work-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .work-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .work-card-content {
-            padding: 25px;
-        }
-
-        .work-card h3 {
-            color: #2563eb;
-            margin-bottom: 10px;
-        }
-
-        .work-card p {
-            color: #555;
-            line-height: 1.5;
-        }
-
-        /* SERVICES */
-
-        .services {
-            padding: 80px 8%;
-            background: #f5f7fa;
-            text-align: center;
-        }
-
-        .services h2 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .services-intro {
-            max-width: 650px;
-            margin: 0 auto 45px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .service-container {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            width: 280px;
             padding: 30px;
-            background: white;
+        }
+
+        .deliverable-card h3 {
+            color: #d4af37;
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+
+        .deliverable-card h4 {
+            margin-bottom: 20px;
+            color: #aaa;
+        }
+
+        .deliverable-card p {
+            padding: 9px 0;
+            border-bottom: 1px solid #292929;
+            color: #ccc;
+        }
+
+        /* WHY US */
+
+        .why {
+            background: #080808;
+        }
+
+        .why-container {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 30px 15px;
+            background: #151515;
             border-radius: 10px;
-            transition: 0.3s;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-        }
-
-        .icon {
+        .why-icon {
             font-size: 40px;
             margin-bottom: 15px;
         }
 
-        .card h3 {
-            margin-bottom: 15px;
-            color: #2563eb;
+        .why-card h3 {
+            color: #d4af37;
+            margin-bottom: 10px;
         }
 
-        .card p {
-            color: #555;
-            line-height: 1.5;
+        .why-card p {
+            color: #999;
+            font-size: 14px;
         }
 
         /* CONTACT */
 
         .contact {
-            padding: 80px 8%;
-            background: white;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .contact-intro {
-            color: #666;
-            font-size: 18px;
-            margin-bottom: 45px;
+            background:
+                linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.95)),
+                radial-gradient(circle, #4d3b16, #080808);
         }
 
         .contact-container {
-            display: flex;
-            justify-content: center;
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            flex-wrap: wrap;
         }
 
         .contact-card {
-            width: 280px;
+            background: rgba(25,25,25,.9);
+            border: 1px solid #333;
+            border-radius: 10px;
             padding: 30px;
-            background: #f5f7fa;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
         }
 
         .contact-icon {
-            font-size: 40px;
+            font-size: 35px;
             margin-bottom: 15px;
         }
 
         .contact-card h3 {
+            color: #d4af37;
             margin-bottom: 10px;
         }
 
         .contact-card p {
-            color: #666;
+            color: #aaa;
             margin-bottom: 20px;
-        }
-
-        .contact-btn {
-            display: inline-block;
-            padding: 11px 22px;
-            background: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: 0.3s;
-        }
-
-        .contact-btn:hover {
-            background: #1d4ed8;
+            word-break: break-word;
         }
 
         /* FOOTER */
 
         footer {
-            background: #111827;
-            color: white;
+            background: #050505;
+            border-top: 1px solid #222;
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
+        }
+
+        footer h3 {
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #777;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        /* WHATSAPP FLOATING BUTTON */
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            text-decoration: none;
+            z-index: 2000;
+            box-shadow: 0 5px 20px rgba(0,0,0,.4);
         }
 
         /* MOBILE */
 
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
 
             header {
                 flex-direction: column;
@@ -479,35 +504,64 @@
             }
 
             nav a {
-                margin: 0 6px;
-                font-size: 14px;
+                display: inline-block;
+                margin: 5px 7px;
+                font-size: 13px;
             }
 
-            .home h1 {
-                font-size: 40px;
+            .hero h1 {
+                font-size: 43px;
             }
 
-            .home h2 {
-                font-size: 20px;
+            .hero h2 {
+                font-size: 19px;
             }
 
-            .about-content {
-                flex-direction: column;
-                text-align: center;
+            .section-title h2,
+            .event-title h2 {
+                font-size: 32px;
             }
 
-            .about-image img {
-                width: 220px;
-                height: 220px;
-            }
-
-            .experience-card {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .work-container {
+            .package-container,
+            .deliverable-container,
+            .contact-container {
                 grid-template-columns: 1fr;
+            }
+
+            .locations {
+                grid-template-columns: 1fr;
+            }
+
+            .why-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            section {
+                padding: 65px 5%;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-small {
+                font-size: 11px;
+                letter-spacing: 2px;
+            }
+
+            .why-container {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                width: 100%;
             }
 
         }
@@ -516,59 +570,62 @@
 
 </head>
 
+
 <body>
 
     <!-- HEADER -->
 
     <header>
 
-        <h2>Anurag</h2>
+        <div class="logo">
+            The <span>Shutter Up</span> Studios
+        </div>
 
         <nav>
             <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#work">My Work</a>
-            <a href="#services">Services</a>
+            <a href="#packages">Packages</a>
+            <a href="#wedding">Wedding</a>
+            <a href="#prewedding">Pre-Wedding</a>
+            <a href="#deliverables">Deliverables</a>
             <a href="#contact">Contact</a>
         </nav>
 
     </header>
 
 
-    <!-- HOME -->
+    <!-- HERO -->
 
-    <section class="home" id="home">
+    <section class="hero" id="home">
 
-        <div class="home-content">
+        <div class="hero-content">
 
-            <p class="welcome">
-                WELCOME TO MY WEBSITE
-            </p>
+            <div class="hero-small">
+                WEDDING PHOTOGRAPHY • CINEMATIC FILMS
+            </div>
 
             <h1>
-                Hi, I'm <span>Anurag</span>
+                The <span>Shutter Up</span> Studios
             </h1>
 
             <h2>
-                Field Engineer & Technical Support Specialist
+                Capturing Your Moments • Creating Your Story
             </h2>
 
             <p>
-                I provide professional technical support for
-                Interactive Flat Panels, OPS systems,
-                installation, troubleshooting and maintenance.
+                Wedding photography, cinematic films, pre-wedding shoots
+                and unforgettable memories crafted with creativity and passion.
             </p>
 
-            <div class="home-buttons">
+            <div class="buttons">
 
-                <a href="#work" class="btn">
-                    View My Work
+                <a href="#packages" class="btn">
+                    Explore Packages
                 </a>
 
-                <a href="#contact" class="btn btn-outline">
-                    Contact Me
+                <a href="https://wa.me/918840688961?text=Hi%20The%20Shutter%20Up%20Studios%2C%20I%20want%20to%20know%20about%20your%20photography%20packages."
+                    class="btn btn-outline"
+                    target="_blank">
+                    WhatsApp Us
                 </a>
 
             </div>
@@ -580,38 +637,154 @@
 
     <!-- ABOUT -->
 
-    <section class="about" id="about">
+    <section class="about">
+
+        <div class="section-title">
+
+            <small>OUR STORY</small>
+
+            <h2>Photography That Tells Your Story</h2>
+
+        </div>
 
         <div class="about-content">
 
-            <div class="about-image">
+            <h3>The Shutter Up Studios</h3>
 
-                <img src="profile.jpg" alt="Anurag">
+            <p>
+                We capture weddings, engagements, pre-wedding celebrations
+                and special moments with a combination of traditional
+                photography, candid photography and cinematic storytelling.
+            </p>
+
+            <p>
+                From the first smile to the final celebration,
+                our goal is to preserve your memories so you can
+                experience them again and again.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ENGAGEMENT -->
+
+    <section class="packages" id="packages">
+
+        <div class="section-title">
+
+            <small>ENGAGEMENT PHOTOGRAPHY</small>
+
+            <h2>Engagement Packages</h2>
+
+            <p>
+                Ring ceremony • Premium moments • Forever story
+            </p>
+
+        </div>
+
+
+        <div class="package-container">
+
+
+            <!-- SILVER -->
+
+            <div class="package-card">
+
+                <h3>Silver</h3>
+
+                <div class="price">₹20,000</div>
+
+                <h4>SERVICES INCLUDED</h4>
+
+                <ul>
+                    <li>Traditional Photography</li>
+                    <li>Traditional Videography</li>
+                </ul>
+
+                <br>
+
+                <h4>DELIVERABLES</h4>
+
+                <ul>
+                    <li>12x18 Photo Frame</li>
+                    <li>E-Invitation</li>
+                    <li>20 Sheets Premium Album</li>
+                    <li>1 Traditional Highlight Film</li>
+                    <li>20-30 Edited Photos</li>
+                    <li>All Raw Photos</li>
+                </ul>
 
             </div>
 
-            <div class="about-text">
 
-                <h2>About Me</h2>
+            <!-- GOLD -->
 
-                <h3>Field Engineer</h3>
+            <div class="package-card">
 
-                <p>
-                    Hello, I am Anurag, a Field Engineer specializing
-                    in Interactive Flat Panels, OPS systems and
-                    technical support.
-                </p>
+                <h3>Gold</h3>
 
-                <p>
-                    I work on installation, troubleshooting,
-                    maintenance and technical support for smart
-                    interactive displays.
-                </p>
+                <div class="price">₹30,000</div>
 
-                <p>
-                    My goal is to provide reliable and professional
-                    technical solutions to customers.
-                </p>
+                <h4>SERVICES INCLUDED</h4>
+
+                <ul>
+                    <li>Traditional Photography</li>
+                    <li>Traditional Videography</li>
+                    <li>Candid Photography</li>
+                </ul>
+
+                <br>
+
+                <h4>DELIVERABLES</h4>
+
+                <ul>
+                    <li>12x18 Photo Frame</li>
+                    <li>E-Invitation</li>
+                    <li>30 Sheets Premium Album</li>
+                    <li>1 Traditional Highlight Film</li>
+                    <li>20-30 Edited Photos</li>
+                    <li>All Raw Photos</li>
+                </ul>
+
+            </div>
+
+
+            <!-- PLATINUM -->
+
+            <div class="package-card popular">
+
+                <div class="popular-label">
+                    MOST POPULAR
+                </div>
+
+                <h3>Platinum</h3>
+
+                <div class="price">₹40,000</div>
+
+                <h4>SERVICES INCLUDED</h4>
+
+                <ul>
+                    <li>Traditional Photography</li>
+                    <li>Traditional Videography</li>
+                    <li>Candid Photography</li>
+                    <li>Cinematography</li>
+                </ul>
+
+                <br>
+
+                <h4>DELIVERABLES</h4>
+
+                <ul>
+                    <li>16x24 Photo Frame</li>
+                    <li>E-Invitation</li>
+                    <li>30 Sheets Premium Album</li>
+                    <li>1-2 Instagram Reels</li>
+                    <li>Cinematic Teaser & Highlight Film</li>
+                    <li>20-30 Edited Photos</li>
+                    <li>All Raw Photos</li>
+                </ul>
 
             </div>
 
@@ -620,229 +793,65 @@
     </section>
 
 
-    <!-- SKILLS -->
+    <!-- HALDI MEHNDI -->
 
-    <section class="skills" id="skills">
+    <section class="event-section">
 
-        <h2>My Skills</h2>
+        <div class="event-title">
 
-        <p class="skills-intro">
-            My technical skills and areas of expertise.
-        </p>
+            <h2>Haldi & Mehndi Packages</h2>
 
-        <div class="skills-container">
-
-            <div class="skill">
-
-                <h3>IFP Troubleshooting</h3>
-
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 90%;"></div>
-                </div>
-
-            </div>
-
-            <div class="skill">
-
-                <h3>OPS Troubleshooting</h3>
-
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 85%;"></div>
-                </div>
-
-            </div>
-
-            <div class="skill">
-
-                <h3>Windows Support</h3>
-
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 85%;"></div>
-                </div>
-
-            </div>
-
-            <div class="skill">
-
-                <h3>Installation & Setup</h3>
-
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 90%;"></div>
-                </div>
-
-            </div>
+            <p>
+                Beautiful moments from your pre-wedding celebrations.
+            </p>
 
         </div>
 
-    </section>
+
+        <div class="package-container">
 
 
-    <!-- EXPERIENCE -->
+            <div class="package-card">
 
-    <section class="experience" id="experience">
+                <h3>Silver</h3>
 
-        <h2>My Experience</h2>
+                <div class="price">₹20,000</div>
 
-        <p class="experience-intro">
-            My professional work and technical experience.
-        </p>
-
-        <div class="experience-container">
-
-            <div class="experience-card">
-
-                <div class="experience-icon">
-                    🖥️
-                </div>
-
-                <div>
-
-                    <h3>
-                        Interactive Flat Panel Support
-                    </h3>
-
-                    <p>
-                        Troubleshooting and technical support for
-                        Interactive Flat Panels, including display,
-                        touch, firmware and Android-related issues.
-                    </p>
-
-                </div>
+                <ul>
+                    <li>One Photographer</li>
+                    <li>One Videographer</li>
+                </ul>
 
             </div>
 
 
-            <div class="experience-card">
+            <div class="package-card">
 
-                <div class="experience-icon">
-                    💻
-                </div>
+                <h3>Gold</h3>
 
-                <div>
+                <div class="price">₹30,000</div>
 
-                    <h3>
-                        OPS & Windows Support
-                    </h3>
-
-                    <p>
-                        Handling OPS hardware and Windows-related
-                        issues including SSD, RAM, BIOS, boot and
-                        operating system troubleshooting.
-                    </p>
-
-                </div>
+                <ul>
+                    <li>One Photographer</li>
+                    <li>One Videographer</li>
+                    <li>One Candid Photographer</li>
+                </ul>
 
             </div>
 
 
-            <div class="experience-card">
+            <div class="package-card">
 
-                <div class="experience-icon">
-                    🔧
-                </div>
+                <h3>Platinum</h3>
 
-                <div>
+                <div class="price">₹45,000</div>
 
-                    <h3>
-                        Installation & Maintenance
-                    </h3>
-
-                    <p>
-                        Experience in interactive display installation,
-                        configuration, testing and technical maintenance.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- MY WORK -->
-
-    <section class="work" id="work">
-
-        <h2>My Work</h2>
-
-        <p class="work-intro">
-            Technical work related to Interactive Flat Panels,
-            installation and troubleshooting.
-        </p>
-
-        <div class="work-container">
-
-
-            <!-- FIRST IMAGE - YOUR UPLOADED IMAGE -->
-
-            <div class="work-card">
-
-                <img
-                    src="flat panel installation setup[ .jpeg"
-                    alt="Flat Panel Installation Setup">
-
-                <div class="work-card-content">
-
-                    <h3>
-                        Flat Panel Installation
-                    </h3>
-
-                    <p>
-                        Interactive Flat Panel installation,
-                        setup, configuration and testing.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- SECOND IMAGE - OPS SUPPORT -->
-
-            <div class="work-card">
-
-                <img
-                    src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80"
-                    alt="Computer and Technical Support">
-
-                <div class="work-card-content">
-
-                    <h3>
-                        OPS & Windows Support
-                    </h3>
-
-                    <p>
-                        OPS hardware, Windows, SSD, RAM,
-                        BIOS and boot troubleshooting.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- THIRD IMAGE - YOUR UPLOADED IMAGE -->
-
-            <div class="work-card">
-
-                <img
-                    src="flat panel troubble shooting.jpeg"
-                    alt="Flat Panel Troubleshooting">
-
-                <div class="work-card-content">
-
-                    <h3>
-                        Flat Panel Troubleshooting
-                    </h3>
-
-                    <p>
-                        Display, touch, firmware, Android
-                        and technical troubleshooting.
-                    </p>
-
-                </div>
+                <ul>
+                    <li>One Photographer</li>
+                    <li>One Videographer</li>
+                    <li>One Candid Photographer</li>
+                    <li>One Cinematic Videography</li>
+                </ul>
 
             </div>
 
@@ -852,86 +861,323 @@
     </section>
 
 
-    <!-- SERVICES -->
+    <!-- WEDDING -->
 
-    <section class="services" id="services">
+    <section class="packages" id="wedding">
 
-        <h2>My Services</h2>
+        <div class="section-title">
 
-        <p class="services-intro">
-            I provide technical support and solutions for
-            Interactive Flat Panels and OPS systems.
-        </p>
+            <small>WEDDING PHOTOGRAPHY</small>
 
-        <div class="service-container">
+            <h2>Wedding Packages</h2>
 
-            <div class="card">
+            <p>
+                Traditional coverage, candid photography and cinematic films.
+            </p>
 
-                <div class="icon">
-                    🖥️
+        </div>
+
+
+        <div class="package-container">
+
+
+            <div class="package-card">
+
+                <h3>Silver</h3>
+
+                <div class="price">₹45,000</div>
+
+                <ul>
+                    <li>One Photographer</li>
+                    <li>One Videographer</li>
+                    <li>One Candid Photographer</li>
+                </ul>
+
+            </div>
+
+
+            <div class="package-card">
+
+                <h3>Gold</h3>
+
+                <div class="price">₹70,000</div>
+
+                <ul>
+                    <li>One Photographer</li>
+                    <li>One Videographer</li>
+                    <li>One Candid Photographer</li>
+                    <li>One Cinematic Videography</li>
+                </ul>
+
+            </div>
+
+
+            <div class="package-card popular">
+
+                <div class="popular-label">
+                    PREMIUM
                 </div>
 
-                <h3>
-                    IFP Service
-                </h3>
+                <h3>Platinum</h3>
+
+                <div class="price">₹80,000</div>
+
+                <ul>
+                    <li>One Photographer</li>
+                    <li>One Videographer</li>
+                    <li>One Candid Photographer</li>
+                    <li>One Cinematic Videography</li>
+                    <li>One Latest Drone</li>
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- PRE WEDDING -->
+
+    <section class="prewedding" id="prewedding">
+
+        <div class="section-title">
+
+            <small>LOVE STORY • CINEMATIC FILMS</small>
+
+            <h2>Pre-Wedding Packages</h2>
+
+            <p>
+                Create a cinematic story before your big day.
+            </p>
+
+        </div>
+
+
+        <div class="locations">
+
+            <div class="location-card">
+                <h3>Rumi Darwaza<br>Heritage Sunset</h3>
+            </div>
+
+            <div class="location-card">
+                <h3>Bara Imambara</h3>
+            </div>
+
+            <div class="location-card">
+                <h3>Palace Sunset</h3>
+            </div>
+
+        </div>
+
+
+        <div class="package-container">
+
+
+            <div class="package-card">
+
+                <h3>Silver</h3>
+
+                <div class="price">₹25,000</div>
+
+                <ul>
+                    <li>Cinematic Film in 1080p</li>
+                    <li>All Raw Photos</li>
+                    <li>Edited Photos</li>
+                    <li>3 Days Countdown</li>
+                    <li>1 Save The Date</li>
+                    <li>2 Instagram Reels</li>
+                </ul>
+
+            </div>
+
+
+            <div class="package-card popular">
+
+                <div class="popular-label">
+                    MOST POPULAR
+                </div>
+
+                <h3>Gold</h3>
+
+                <div class="price">₹30,000</div>
+
+                <ul>
+                    <li>Cinematic Film in 4K</li>
+                    <li>All Raw Photos</li>
+                    <li>Edited Photos</li>
+                    <li>3 Days Countdown</li>
+                    <li>1 Save The Date</li>
+                    <li>2 Instagram Reels</li>
+                </ul>
+
+            </div>
+
+
+            <div class="package-card">
+
+                <h3>Platinum</h3>
+
+                <div class="price">₹35,000</div>
+
+                <ul>
+                    <li>Cinematic Story-Based Film in 4K</li>
+                    <li>All Raw Photos</li>
+                    <li>Edited Photos</li>
+                    <li>3 Days Countdown</li>
+                    <li>1 Save The Date</li>
+                    <li>2 Instagram Reels</li>
+                    <li>Drone Shoot</li>
+                    <li>1 Mini Photobook</li>
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- DELIVERABLES -->
+
+    <section class="deliverables" id="deliverables">
+
+        <div class="section-title">
+
+            <small>WHAT YOU GET</small>
+
+            <h2>Premium Deliverables</h2>
+
+            <p>
+                Carefully selected deliverables to preserve your memories.
+            </p>
+
+        </div>
+
+
+        <div class="deliverable-container">
+
+
+            <div class="deliverable-card">
+
+                <h3>Silver</h3>
+                <h4>ESSENTIAL LUXURY</h4>
+
+                <p>✓ E-Invitation</p>
+                <p>✓ Edited Photos</p>
+                <p>✓ Traditional Highlight</p>
+                <p>✓ Full Videos</p>
+                <p>✓ 12x18 Frame</p>
+                <p>✓ 64GB Pendrive</p>
+                <p>✓ 35 Sheets Album</p>
+
+            </div>
+
+
+            <div class="deliverable-card">
+
+                <h3>Gold</h3>
+                <h4>SIGNATURE LUXURY</h4>
+
+                <p>✓ E-Invitation</p>
+                <p>✓ Edited Photos</p>
+                <p>✓ Teaser & Highlight</p>
+                <p>✓ Full Videos</p>
+                <p>✓ 16x24 Frame</p>
+                <p>✓ 64GB Pendrive</p>
+                <p>✓ 40 Sheets Album</p>
+                <p>✓ Mini Album & Calendar</p>
+
+            </div>
+
+
+            <div class="deliverable-card">
+
+                <h3>Platinum</h3>
+                <h4>ROYAL LUXURY</h4>
+
+                <p>✓ E-Invitation</p>
+                <p>✓ Instagram Reels</p>
+                <p>✓ Edited Photos</p>
+                <p>✓ Teaser & Highlight</p>
+                <p>✓ Full Videos</p>
+                <p>✓ 20x30 Frame</p>
+                <p>✓ 64GB Pendrive</p>
+                <p>✓ 50 Sheets Album</p>
+                <p>✓ Mini Album & Calendar</p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY US -->
+
+    <section class="why">
+
+        <div class="section-title">
+
+            <small>THE EXPERIENCE</small>
+
+            <h2>Why Choose Us?</h2>
+
+        </div>
+
+
+        <div class="why-container">
+
+            <div class="why-card">
+
+                <div class="why-icon">📸</div>
+
+                <h3>Candid Moments</h3>
 
                 <p>
-                    Interactive Flat Panel troubleshooting,
-                    display issues, touch problems and technical support.
+                    Natural emotions and unforgettable moments.
                 </p>
 
             </div>
 
 
-            <div class="card">
+            <div class="why-card">
 
-                <div class="icon">
-                    💻
-                </div>
+                <div class="why-icon">🎥</div>
 
-                <h3>
-                    OPS Support
-                </h3>
+                <h3>Cinematic Films</h3>
 
                 <p>
-                    Windows, SSD, RAM, BIOS, boot and
-                    other OPS hardware and software troubleshooting.
+                    Creative films that bring your story to life.
                 </p>
 
             </div>
 
 
-            <div class="card">
+            <div class="why-card">
 
-                <div class="icon">
-                    🔧
-                </div>
+                <div class="why-icon">💍</div>
 
-                <h3>
-                    Installation
-                </h3>
+                <h3>Wedding Stories</h3>
 
                 <p>
-                    Interactive display installation,
-                    configuration, testing and setup.
+                    Every important moment captured beautifully.
                 </p>
 
             </div>
 
 
-            <div class="card">
+            <div class="why-card">
 
-                <div class="icon">
-                    🛠️
-                </div>
+                <div class="why-icon">✨</div>
 
-                <h3>
-                    Maintenance
-                </h3>
+                <h3>Premium Memories</h3>
 
                 <p>
-                    Technical maintenance, inspection and
-                    troubleshooting of smart interactive displays.
+                    Quality photographs and memorable deliverables.
                 </p>
 
             </div>
@@ -945,14 +1191,18 @@
 
     <section class="contact" id="contact">
 
-        <h2>
-            Let's Connect
-        </h2>
+        <div class="section-title">
 
-        <p class="contact-intro">
-            If you need technical support, installation or service,
-            feel free to contact me.
-        </p>
+            <small>LET'S CREATE MEMORIES</small>
+
+            <h2>Book Your Shoot</h2>
+
+            <p>
+                Contact us for customized wedding and photography packages.
+            </p>
+
+        </div>
+
 
         <div class="contact-container">
 
@@ -961,24 +1211,14 @@
 
             <div class="contact-card">
 
-                <div class="contact-icon">
-                    📞
-                </div>
+                <div class="contact-icon">📞</div>
 
-                <h3>
-                    Call Me
-                </h3>
+                <h3>Call Us</h3>
 
-                <p>
-                    Let's discuss your requirement.
-                </p>
+                <p>8840688961</p>
 
-                <a
-                    href="tel:+918112358495"
-                    class="contact-btn">
-
+                <a href="tel:+918840688961" class="btn">
                     Call Now
-
                 </a>
 
             </div>
@@ -988,56 +1228,48 @@
 
             <div class="contact-card">
 
-                <div class="contact-icon">
-                    💬
-                </div>
+                <div class="contact-icon">💬</div>
 
-                <h3>
-                    WhatsApp
-                </h3>
+                <h3>WhatsApp</h3>
 
-                <p>
-                    Send me a message on WhatsApp.
-                </p>
+                <p>Send us your requirement.</p>
 
-                <a
-                    href="https://wa.me/918112358495"
-                    class="contact-btn"
+                <a href="https://wa.me/918840688961?text=Hi%20The%20Shutter%20Up%20Studios%2C%20I%20want%20to%20book%20a%20photography%20package."
+                    class="btn"
                     target="_blank">
-
-                    WhatsApp Me
-
+                    WhatsApp Us
                 </a>
 
             </div>
 
 
-            <!-- EMAIL -->
+            <!-- INSTAGRAM -->
 
             <div class="contact-card">
 
-                <div class="contact-icon">
-                    📧
-                </div>
+                <div class="contact-icon">📷</div>
 
-                <h3>
-                    Email
-                </h3>
+                <h3>Instagram</h3>
 
-                <p>
-                    Send me an email for enquiries.
-                </p>
+                <p>@the_shutter_up_studios</p>
 
-                <a
-                    href="mailto:sharmaanurag0323@email.com"
-                    class="contact-btn">
-
-                    Email Me
-
+                <a href="https://www.instagram.com/the_shutter_up_studios/"
+                    class="btn"
+                    target="_blank">
+                    Visit Instagram
                 </a>
 
             </div>
 
+
+        </div>
+
+
+        <div style="text-align:center; margin-top:40px; color:#aaa;">
+
+            <p>
+                📍 551GH/20M, Govind Gali, Alambagh, Lucknow
+            </p>
 
         </div>
 
@@ -1048,11 +1280,37 @@
 
     <footer>
 
+        <h3>The Shutter Up Studios</h3>
+
         <p>
-            © 2026 Anurag. All Rights Reserved.
+            Wedding Photography • Cinematic Films • Pre-Wedding
+        </p>
+
+        <p>
+            📍 551GH/20M, Govind Gali, Alambagh, Lucknow
+        </p>
+
+        <p>
+            📞 8840688961
+        </p>
+
+        <p>
+            © 2026 The Shutter Up Studios. All Rights Reserved.
         </p>
 
     </footer>
+
+
+    <!-- FLOATING WHATSAPP -->
+
+    <a href="https://wa.me/918840688961?text=Hi%20The%20Shutter%20Up%20Studios%2C%20I%20want%20to%20know%20about%20your%20packages."
+        class="whatsapp"
+        target="_blank"
+        title="Chat on WhatsApp">
+
+        💬
+
+    </a>
 
 
 </body>
