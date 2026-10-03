@@ -1,1318 +1,1034 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>The Shutter Up Studios | Wedding Photography</title>
-
-    <meta name="description"
-        content="The Shutter Up Studios - Wedding Photography, Cinematic Films, Pre-Wedding and Event Photography in Lucknow.">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0c0c0c;
-            color: #fff;
-            line-height: 1.6;
-        }
-
-        /* HEADER */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(10, 10, 10, 0.96);
-            border-bottom: 1px solid #292929;
-            padding: 18px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 23px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: #d4af37;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 22px;
-            font-size: 15px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #d4af37;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 80px 20px;
-            background:
-                linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.88)),
-                radial-gradient(circle at center, #493b19, #080808 65%);
-        }
-
-        .hero-content {
-            max-width: 900px;
-        }
-
-        .hero-small {
-            color: #d4af37;
-            font-size: 14px;
-            letter-spacing: 4px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-family: Georgia, serif;
-            font-size: 65px;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            color: #d4af37;
-        }
-
-        .hero h2 {
-            font-size: 23px;
-            font-weight: normal;
-            color: #ddd;
-            margin-bottom: 22px;
-        }
-
-        .hero p {
-            color: #bbb;
-            font-size: 18px;
-            max-width: 700px;
-            margin: auto auto 35px;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            background: #d4af37;
-            color: #111;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            background: #f0cf62;
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: #d4af37;
-            border: 1px solid #d4af37;
-        }
-
-        .btn-outline:hover {
-            color: #111;
-            background: #d4af37;
-        }
-
-        /* COMMON SECTION */
-
-        section {
-            padding: 90px 7%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 55px;
-        }
-
-        .section-title small {
-            color: #d4af37;
-            letter-spacing: 3px;
-            font-weight: bold;
-        }
-
-        .section-title h2 {
-            font-family: Georgia, serif;
-            font-size: 42px;
-            margin: 10px 0;
-        }
-
-        .section-title p {
-            color: #999;
-            max-width: 700px;
-            margin: auto;
-        }
-
-        /* ABOUT */
-
-        .about {
-            background: #111;
-        }
-
-        .about-content {
-            max-width: 1000px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .about-content h3 {
-            color: #d4af37;
-            font-size: 25px;
-            margin-bottom: 20px;
-        }
-
-        .about-content p {
-            color: #bbb;
-            max-width: 800px;
-            margin: 0 auto 15px;
-            font-size: 17px;
-        }
-
-        /* PACKAGES */
-
-        .packages {
-            background: #080808;
-        }
-
-        .package-container {
-            max-width: 1150px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .package-card {
-            background: #151515;
-            border: 1px solid #2d2d2d;
-            border-radius: 12px;
-            padding: 35px 28px;
-            text-align: center;
-            position: relative;
-            transition: 0.3s;
-        }
-
-        .package-card:hover {
-            transform: translateY(-8px);
-            border-color: #d4af37;
-        }
-
-        .popular {
-            border: 1px solid #d4af37;
-        }
-
-        .popular-label {
-            position: absolute;
-            top: -14px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #d4af37;
-            color: #111;
-            padding: 5px 18px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .package-card h3 {
-            color: #d4af37;
-            font-size: 27px;
-            margin-bottom: 8px;
-        }
-
-        .price {
-            font-size: 35px;
-            font-weight: bold;
-            margin-bottom: 25px;
-        }
-
-        .package-card h4 {
-            color: #aaa;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-
-        .package-card ul {
-            list-style: none;
-            text-align: left;
-        }
-
-        .package-card li {
-            padding: 10px 0;
-            border-bottom: 1px solid #292929;
-            color: #ccc;
-        }
-
-        .package-card li::before {
-            content: "✓";
-            color: #d4af37;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        /* EVENT SECTION */
-
-        .event-section {
-            background: #111;
-        }
-
-        .event-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .event-title h2 {
-            font-family: Georgia, serif;
-            font-size: 40px;
-        }
-
-        .event-title p {
-            color: #999;
-        }
-
-        /* PRE WEDDING */
-
-        .prewedding {
-            background: #080808;
-        }
-
-        .locations {
-            max-width: 1000px;
-            margin: 0 auto 50px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .location-card {
-            min-height: 180px;
-            border-radius: 10px;
-            padding: 25px;
-            display: flex;
-            align-items: flex-end;
-            background:
-                linear-gradient(transparent, rgba(0,0,0,.9)),
-                linear-gradient(135deg, #6b5730, #171717);
-            border: 1px solid #333;
-        }
-
-        .location-card h3 {
-            color: #fff;
-        }
-
-        /* DELIVERABLES */
-
-        .deliverables {
-            background: #111;
-        }
-
-        .deliverable-container {
-            max-width: 1100px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .deliverable-card {
-            background: #171717;
-            border: 1px solid #2c2c2c;
-            border-radius: 12px;
-            padding: 30px;
-        }
-
-        .deliverable-card h3 {
-            color: #d4af37;
-            font-size: 26px;
-            margin-bottom: 5px;
-        }
-
-        .deliverable-card h4 {
-            margin-bottom: 20px;
-            color: #aaa;
-        }
-
-        .deliverable-card p {
-            padding: 9px 0;
-            border-bottom: 1px solid #292929;
-            color: #ccc;
-        }
-
-        /* WHY US */
-
-        .why {
-            background: #080808;
-        }
-
-        .why-container {
-            max-width: 1000px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .why-card {
-            text-align: center;
-            padding: 30px 15px;
-            background: #151515;
-            border-radius: 10px;
-        }
-
-        .why-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .why-card h3 {
-            color: #d4af37;
-            margin-bottom: 10px;
-        }
-
-        .why-card p {
-            color: #999;
-            font-size: 14px;
-        }
-
-        /* CONTACT */
-
-        .contact {
-            background:
-                linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.95)),
-                radial-gradient(circle, #4d3b16, #080808);
-        }
-
-        .contact-container {
-            max-width: 1000px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .contact-card {
-            background: rgba(25,25,25,.9);
-            border: 1px solid #333;
-            border-radius: 10px;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .contact-icon {
-            font-size: 35px;
-            margin-bottom: 15px;
-        }
-
-        .contact-card h3 {
-            color: #d4af37;
-            margin-bottom: 10px;
-        }
-
-        .contact-card p {
-            color: #aaa;
-            margin-bottom: 20px;
-            word-break: break-word;
-        }
-
-        /* FOOTER */
-
-        footer {
-            background: #050505;
-            border-top: 1px solid #222;
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        footer h3 {
-            color: #d4af37;
-            margin-bottom: 10px;
-        }
-
-        footer p {
-            color: #777;
-            font-size: 14px;
-            margin: 5px 0;
-        }
-
-        /* WHATSAPP FLOATING BUTTON */
-
-        .whatsapp {
-            position: fixed;
-            right: 22px;
-            bottom: 22px;
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            background: #25D366;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 28px;
-            text-decoration: none;
-            z-index: 2000;
-            box-shadow: 0 5px 20px rgba(0,0,0,.4);
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 900px) {
-
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav {
-                text-align: center;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px 7px;
-                font-size: 13px;
-            }
-
-            .hero h1 {
-                font-size: 43px;
-            }
-
-            .hero h2 {
-                font-size: 19px;
-            }
-
-            .section-title h2,
-            .event-title h2 {
-                font-size: 32px;
-            }
-
-            .package-container,
-            .deliverable-container,
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-
-            .locations {
-                grid-template-columns: 1fr;
-            }
-
-            .why-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 500px) {
-
-            section {
-                padding: 65px 5%;
-            }
-
-            .hero {
-                min-height: 80vh;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero-small {
-                font-size: 11px;
-                letter-spacing: 2px;
-            }
-
-            .why-container {
-                grid-template-columns: 1fr;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Shutter Up Studios | Wedding Photography</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0f0f0f;
+    color:#fff;
+    line-height:1.6;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(15,15,15,.96);
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #333;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#d4af37;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:22px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.75)),
+    url("rumi-gate1.jpg") center/cover;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.small-title{
+    color:#d4af37;
+    letter-spacing:4px;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    font-size:25px;
+    font-weight:normal;
+    margin-bottom:25px;
+}
+
+.hero p{
+    color:#ddd;
+    font-size:18px;
+    max-width:700px;
+    margin:auto auto 30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 28px;
+    margin:5px;
+    border-radius:4px;
+    text-decoration:none;
+    background:#d4af37;
+    color:#111;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#fff;
+}
+
+.btn-outline{
+    background:transparent;
+    color:white;
+    border:1px solid #d4af37;
+}
+
+section{
+    padding:80px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:#d4af37;
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#bbb;
+}
+
+/* LOCATIONS */
+
+.locations{
+    background:#151515;
+}
+
+.location-container{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.location-card{
+    background:#202020;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.4);
+}
+
+.location-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    display:block;
+}
+
+.location-content{
+    padding:22px;
+    text-align:center;
+}
+
+.location-content h3{
+    color:#d4af37;
+    margin-bottom:8px;
+}
+
+.location-content p{
+    color:#bbb;
+}
+
+/* PACKAGES */
+
+.packages{
+    background:#0f0f0f;
+}
+
+.package-container{
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.package{
+    background:#1b1b1b;
+    padding:30px;
+    border-radius:10px;
+    border:1px solid #333;
+    text-align:center;
+}
+
+.package.popular{
+    border:2px solid #d4af37;
+    transform:scale(1.03);
+}
+
+.package h3{
+    color:#d4af37;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:34px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+.package ul{
+    list-style:none;
+    text-align:left;
+}
+
+.package li{
+    padding:9px 0;
+    border-bottom:1px solid #333;
+    color:#ddd;
+}
+
+.package li::before{
+    content:"✓ ";
+    color:#d4af37;
+    font-weight:bold;
+}
+
+/* SERVICES */
+
+.services{
+    background:#151515;
+}
+
+.service-container{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.service{
+    background:#202020;
+    padding:30px 20px;
+    text-align:center;
+    border-radius:10px;
+}
+
+.service-icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.service h3{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+.service p{
+    color:#bbb;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#111;
+    text-align:center;
+}
+
+.contact-container{
+    max-width:900px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.contact-card{
+    background:#202020;
+    padding:25px;
+    border-radius:10px;
+    width:270px;
+}
+
+.contact-card h3{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+.contact-card p{
+    color:#bbb;
+    margin-bottom:15px;
+}
+
+.contact-card a{
+    color:white;
+    text-decoration:none;
+}
+
+.contact-card a:hover{
+    color:#d4af37;
+}
+
+footer{
+    background:#080808;
+    padding:25px;
+    text-align:center;
+    color:#999;
+}
+
+footer strong{
+    color:#d4af37;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        text-align:center;
+    }
+
+    nav a{
+        margin:0 7px;
+        font-size:12px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    .location-container,
+    .package-container{
+        grid-template-columns:1fr;
+    }
+
+    .package.popular{
+        transform:none;
+    }
+
+    .service-container{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    .service-container{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:80vh;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+}
+</style>
 </head>
-
 
 <body>
 
-    <!-- HEADER -->
+<!-- HEADER -->
 
-    <header>
+<header>
 
-        <div class="logo">
-            The <span>Shutter Up</span> Studios
+    <div class="logo">
+        The Shutter Up Studios
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#packages">Packages</a>
+        <a href="#locations">Locations</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            WEDDING PHOTOGRAPHY & FILMS
         </div>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#packages">Packages</a>
-            <a href="#wedding">Wedding</a>
-            <a href="#prewedding">Pre-Wedding</a>
-            <a href="#deliverables">Deliverables</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <h1>
+            The Shutter Up Studios
+        </h1>
 
-    </header>
+        <h2>
+            Engagement • Wedding • Pre-Wedding
+        </h2>
+
+        <p>
+            Capturing your beautiful moments through
+            photography, cinematic films and timeless memories.
+        </p>
+
+        <a href="#packages" class="btn">
+            View Packages
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+            Contact Us
+        </a>
+
+    </div>
+
+</section>
 
 
-    <!-- HERO -->
+<!-- LOCATIONS -->
 
-    <section class="hero" id="home">
+<section class="locations" id="locations">
 
-        <div class="hero-content">
+    <div class="section-title">
 
-            <div class="hero-small">
-                WEDDING PHOTOGRAPHY • CINEMATIC FILMS
+        <h2>Pre-Wedding Locations</h2>
+
+        <p>
+            Beautiful locations for your pre-wedding story
+            in Lucknow.
+        </p>
+
+    </div>
+
+    <div class="location-container">
+
+
+        <!-- RUMI DARWAZA -->
+
+        <div class="location-card">
+
+            <img
+                src="rumi-gate1.jpg"
+                alt="Rumi Darwaza Lucknow">
+
+            <div class="location-content">
+
+                <h3>
+                    Rumi Darwaza
+                </h3>
+
+                <p>
+                    Heritage • Royal Architecture • Sunset
+                </p>
+
             </div>
 
-            <h1>
-                The <span>Shutter Up</span> Studios
-            </h1>
+        </div>
 
-            <h2>
-                Capturing Your Moments • Creating Your Story
-            </h2>
 
-            <p>
-                Wedding photography, cinematic films, pre-wedding shoots
-                and unforgettable memories crafted with creativity and passion.
-            </p>
+        <!-- BARA IMAMBARA -->
 
-            <div class="buttons">
+        <div class="location-card">
 
-                <a href="#packages" class="btn">
-                    Explore Packages
-                </a>
+            <img
+                src="bada imambada 2.jpg"
+                alt="Bara Imambara Lucknow">
 
-                <a href="https://wa.me/918840688961?text=Hi%20The%20Shutter%20Up%20Studios%2C%20I%20want%20to%20know%20about%20your%20photography%20packages."
-                    class="btn btn-outline"
-                    target="_blank">
-                    WhatsApp Us
-                </a>
+            <div class="location-content">
+
+                <h3>
+                    Bara Imambara
+                </h3>
+
+                <p>
+                    Heritage • Architecture • Couple Portraits
+                </p>
 
             </div>
 
         </div>
 
-    </section>
 
+        <!-- SUNSET -->
 
-    <!-- ABOUT -->
+        <div class="location-card">
 
-    <section class="about">
+            <img
+                src="sunset 3.jpg"
+                alt="Sunset Pre-Wedding">
 
-        <div class="section-title">
+            <div class="location-content">
 
-            <small>OUR STORY</small>
+                <h3>
+                    Palace Sunset
+                </h3>
 
-            <h2>Photography That Tells Your Story</h2>
+                <p>
+                    Golden Hour • Romantic • Cinematic
+                </p>
 
-        </div>
-
-        <div class="about-content">
-
-            <h3>The Shutter Up Studios</h3>
-
-            <p>
-                We capture weddings, engagements, pre-wedding celebrations
-                and special moments with a combination of traditional
-                photography, candid photography and cinematic storytelling.
-            </p>
-
-            <p>
-                From the first smile to the final celebration,
-                our goal is to preserve your memories so you can
-                experience them again and again.
-            </p>
+            </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
+
+
+<!-- PACKAGES -->
+
+<section class="packages" id="packages">
+
+    <div class="section-title">
+
+        <h2>Photography Packages</h2>
+
+        <p>
+            Choose a package according to your requirements.
+        </p>
+
+    </div>
 
 
     <!-- ENGAGEMENT -->
 
-    <section class="packages" id="packages">
+    <div class="section-title">
 
-        <div class="section-title">
+        <h2>Engagement Photography</h2>
 
-            <small>ENGAGEMENT PHOTOGRAPHY</small>
+    </div>
 
-            <h2>Engagement Packages</h2>
+    <div class="package-container">
 
-            <p>
-                Ring ceremony • Premium moments • Forever story
-            </p>
+        <div class="package">
+
+            <h3>SILVER</h3>
+
+            <div class="price">
+                ₹20,000
+            </div>
+
+            <ul>
+                <li>Traditional Photography</li>
+                <li>Traditional Videography</li>
+                <li>12x18 Photo Frame</li>
+                <li>E-Invitation</li>
+                <li>20 Sheets Premium Album</li>
+                <li>Traditional Highlight Film</li>
+                <li>20-30 Edited Photos</li>
+                <li>All Raw Photos</li>
+            </ul>
 
         </div>
 
 
-        <div class="package-container">
+        <div class="package">
 
+            <h3>GOLD</h3>
 
-            <!-- SILVER -->
-
-            <div class="package-card">
-
-                <h3>Silver</h3>
-
-                <div class="price">₹20,000</div>
-
-                <h4>SERVICES INCLUDED</h4>
-
-                <ul>
-                    <li>Traditional Photography</li>
-                    <li>Traditional Videography</li>
-                </ul>
-
-                <br>
-
-                <h4>DELIVERABLES</h4>
-
-                <ul>
-                    <li>12x18 Photo Frame</li>
-                    <li>E-Invitation</li>
-                    <li>20 Sheets Premium Album</li>
-                    <li>1 Traditional Highlight Film</li>
-                    <li>20-30 Edited Photos</li>
-                    <li>All Raw Photos</li>
-                </ul>
-
+            <div class="price">
+                ₹30,000
             </div>
 
-
-            <!-- GOLD -->
-
-            <div class="package-card">
-
-                <h3>Gold</h3>
-
-                <div class="price">₹30,000</div>
-
-                <h4>SERVICES INCLUDED</h4>
-
-                <ul>
-                    <li>Traditional Photography</li>
-                    <li>Traditional Videography</li>
-                    <li>Candid Photography</li>
-                </ul>
-
-                <br>
-
-                <h4>DELIVERABLES</h4>
-
-                <ul>
-                    <li>12x18 Photo Frame</li>
-                    <li>E-Invitation</li>
-                    <li>30 Sheets Premium Album</li>
-                    <li>1 Traditional Highlight Film</li>
-                    <li>20-30 Edited Photos</li>
-                    <li>All Raw Photos</li>
-                </ul>
-
-            </div>
-
-
-            <!-- PLATINUM -->
-
-            <div class="package-card popular">
-
-                <div class="popular-label">
-                    MOST POPULAR
-                </div>
-
-                <h3>Platinum</h3>
-
-                <div class="price">₹40,000</div>
-
-                <h4>SERVICES INCLUDED</h4>
-
-                <ul>
-                    <li>Traditional Photography</li>
-                    <li>Traditional Videography</li>
-                    <li>Candid Photography</li>
-                    <li>Cinematography</li>
-                </ul>
-
-                <br>
-
-                <h4>DELIVERABLES</h4>
-
-                <ul>
-                    <li>16x24 Photo Frame</li>
-                    <li>E-Invitation</li>
-                    <li>30 Sheets Premium Album</li>
-                    <li>1-2 Instagram Reels</li>
-                    <li>Cinematic Teaser & Highlight Film</li>
-                    <li>20-30 Edited Photos</li>
-                    <li>All Raw Photos</li>
-                </ul>
-
-            </div>
+            <ul>
+                <li>Traditional Photography</li>
+                <li>Traditional Videography</li>
+                <li>Candid Photography</li>
+                <li>12x18 Photo Frame</li>
+                <li>E-Invitation</li>
+                <li>30 Sheets Premium Album</li>
+                <li>Traditional Highlight Film</li>
+                <li>20-30 Edited Photos</li>
+                <li>All Raw Photos</li>
+            </ul>
 
         </div>
 
-    </section>
+
+        <div class="package popular">
+
+            <h3>PLATINUM</h3>
+
+            <div class="price">
+                ₹40,000
+            </div>
+
+            <ul>
+                <li>Traditional Photography</li>
+                <li>Traditional Videography</li>
+                <li>Candid Photography</li>
+                <li>Cinematography</li>
+                <li>16x24 Photo Frame</li>
+                <li>E-Invitation</li>
+                <li>30 Sheets Premium Album</li>
+                <li>1-2 Instagram Reels</li>
+                <li>Cinematic Teaser & Highlight Film</li>
+                <li>20-30 Edited Photos</li>
+                <li>All Raw Photos</li>
+            </ul>
+
+        </div>
+
+    </div>
 
 
     <!-- HALDI MEHNDI -->
 
-    <section class="event-section">
+    <div class="section-title" style="margin-top:80px;">
 
-        <div class="event-title">
+        <h2>Haldi & Mehndi Photography</h2>
 
-            <h2>Haldi & Mehndi Packages</h2>
+    </div>
 
-            <p>
-                Beautiful moments from your pre-wedding celebrations.
-            </p>
+    <div class="package-container">
+
+        <div class="package">
+
+            <h3>SILVER</h3>
+
+            <div class="price">
+                ₹20,000
+            </div>
+
+            <ul>
+                <li>One Photographer</li>
+                <li>One Videographer</li>
+            </ul>
 
         </div>
 
 
-        <div class="package-container">
+        <div class="package">
 
+            <h3>GOLD</h3>
 
-            <div class="package-card">
-
-                <h3>Silver</h3>
-
-                <div class="price">₹20,000</div>
-
-                <ul>
-                    <li>One Photographer</li>
-                    <li>One Videographer</li>
-                </ul>
-
+            <div class="price">
+                ₹30,000
             </div>
 
-
-            <div class="package-card">
-
-                <h3>Gold</h3>
-
-                <div class="price">₹30,000</div>
-
-                <ul>
-                    <li>One Photographer</li>
-                    <li>One Videographer</li>
-                    <li>One Candid Photographer</li>
-                </ul>
-
-            </div>
-
-
-            <div class="package-card">
-
-                <h3>Platinum</h3>
-
-                <div class="price">₹45,000</div>
-
-                <ul>
-                    <li>One Photographer</li>
-                    <li>One Videographer</li>
-                    <li>One Candid Photographer</li>
-                    <li>One Cinematic Videography</li>
-                </ul>
-
-            </div>
-
+            <ul>
+                <li>One Photographer</li>
+                <li>One Videographer</li>
+                <li>One Candid Photographer</li>
+            </ul>
 
         </div>
 
-    </section>
+
+        <div class="package popular">
+
+            <h3>PLATINUM</h3>
+
+            <div class="price">
+                ₹45,000
+            </div>
+
+            <ul>
+                <li>One Photographer</li>
+                <li>One Videographer</li>
+                <li>One Candid Photographer</li>
+                <li>One Cinematic Videography</li>
+            </ul>
+
+        </div>
+
+    </div>
 
 
     <!-- WEDDING -->
 
-    <section class="packages" id="wedding">
+    <div class="section-title" style="margin-top:80px;">
 
-        <div class="section-title">
+        <h2>Wedding Photography</h2>
 
-            <small>WEDDING PHOTOGRAPHY</small>
+    </div>
 
-            <h2>Wedding Packages</h2>
+    <div class="package-container">
 
-            <p>
-                Traditional coverage, candid photography and cinematic films.
-            </p>
+        <div class="package">
+
+            <h3>SILVER</h3>
+
+            <div class="price">
+                ₹45,000
+            </div>
+
+            <ul>
+                <li>One Photographer</li>
+                <li>One Videographer</li>
+                <li>One Candid Photographer</li>
+            </ul>
 
         </div>
 
 
-        <div class="package-container">
+        <div class="package">
 
+            <h3>GOLD</h3>
 
-            <div class="package-card">
-
-                <h3>Silver</h3>
-
-                <div class="price">₹45,000</div>
-
-                <ul>
-                    <li>One Photographer</li>
-                    <li>One Videographer</li>
-                    <li>One Candid Photographer</li>
-                </ul>
-
+            <div class="price">
+                ₹70,000
             </div>
 
-
-            <div class="package-card">
-
-                <h3>Gold</h3>
-
-                <div class="price">₹70,000</div>
-
-                <ul>
-                    <li>One Photographer</li>
-                    <li>One Videographer</li>
-                    <li>One Candid Photographer</li>
-                    <li>One Cinematic Videography</li>
-                </ul>
-
-            </div>
-
-
-            <div class="package-card popular">
-
-                <div class="popular-label">
-                    PREMIUM
-                </div>
-
-                <h3>Platinum</h3>
-
-                <div class="price">₹80,000</div>
-
-                <ul>
-                    <li>One Photographer</li>
-                    <li>One Videographer</li>
-                    <li>One Candid Photographer</li>
-                    <li>One Cinematic Videography</li>
-                    <li>One Latest Drone</li>
-                </ul>
-
-            </div>
-
+            <ul>
+                <li>One Photographer</li>
+                <li>One Videographer</li>
+                <li>One Candid Photographer</li>
+                <li>One Cinematic Videography</li>
+            </ul>
 
         </div>
 
-    </section>
+
+        <div class="package popular">
+
+            <h3>PLATINUM</h3>
+
+            <div class="price">
+                ₹80,000
+            </div>
+
+            <ul>
+                <li>One Photographer</li>
+                <li>One Videographer</li>
+                <li>One Candid Photographer</li>
+                <li>One Cinematic Videography</li>
+                <li>One Latest Drone</li>
+            </ul>
+
+        </div>
+
+    </div>
 
 
     <!-- PRE WEDDING -->
 
-    <section class="prewedding" id="prewedding">
+    <div class="section-title" style="margin-top:80px;">
 
-        <div class="section-title">
+        <h2>Pre-Wedding Photography</h2>
 
-            <small>LOVE STORY • CINEMATIC FILMS</small>
+        <p>
+            Love Story • Cinematic Films • Timeless Memories
+        </p>
 
-            <h2>Pre-Wedding Packages</h2>
+    </div>
+
+    <div class="package-container">
+
+        <div class="package">
+
+            <h3>SILVER</h3>
+
+            <div class="price">
+                ₹25,000
+            </div>
+
+            <ul>
+                <li>Cinematic Film in 1080p</li>
+                <li>All Raw Photos</li>
+                <li>Edited Photos</li>
+                <li>3 Days Countdown</li>
+                <li>1 Save The Date</li>
+                <li>2 Instagram Reels</li>
+            </ul>
+
+        </div>
+
+
+        <div class="package">
+
+            <h3>GOLD</h3>
+
+            <div class="price">
+                ₹30,000
+            </div>
+
+            <ul>
+                <li>Cinematic Film in 4K</li>
+                <li>All Raw Photos</li>
+                <li>Edited Photos</li>
+                <li>3 Days Countdown</li>
+                <li>1 Save The Date</li>
+                <li>2 Instagram Reels</li>
+            </ul>
+
+        </div>
+
+
+        <div class="package popular">
+
+            <h3>PLATINUM</h3>
+
+            <div class="price">
+                ₹35,000
+            </div>
+
+            <ul>
+                <li>Cinematic Story-Based Film in 4K</li>
+                <li>All Raw Photos</li>
+                <li>Edited Photos</li>
+                <li>3 Days Countdown</li>
+                <li>1 Save The Date</li>
+                <li>2 Instagram Reels</li>
+                <li>Drone Shoot</li>
+                <li>1 Mini Photobook</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="section-title">
+
+        <h2>Our Services</h2>
+
+        <p>
+            Professional photography and cinematography services.
+        </p>
+
+    </div>
+
+    <div class="service-container">
+
+        <div class="service">
+
+            <div class="service-icon">
+                📸
+            </div>
+
+            <h3>
+                Traditional Photography
+            </h3>
 
             <p>
-                Create a cinematic story before your big day.
+                Complete wedding and event photography coverage.
             </p>
 
         </div>
 
 
-        <div class="locations">
+        <div class="service">
 
-            <div class="location-card">
-                <h3>Rumi Darwaza<br>Heritage Sunset</h3>
+            <div class="service-icon">
+                🎥
             </div>
 
-            <div class="location-card">
-                <h3>Bara Imambara</h3>
-            </div>
-
-            <div class="location-card">
-                <h3>Palace Sunset</h3>
-            </div>
-
-        </div>
-
-
-        <div class="package-container">
-
-
-            <div class="package-card">
-
-                <h3>Silver</h3>
-
-                <div class="price">₹25,000</div>
-
-                <ul>
-                    <li>Cinematic Film in 1080p</li>
-                    <li>All Raw Photos</li>
-                    <li>Edited Photos</li>
-                    <li>3 Days Countdown</li>
-                    <li>1 Save The Date</li>
-                    <li>2 Instagram Reels</li>
-                </ul>
-
-            </div>
-
-
-            <div class="package-card popular">
-
-                <div class="popular-label">
-                    MOST POPULAR
-                </div>
-
-                <h3>Gold</h3>
-
-                <div class="price">₹30,000</div>
-
-                <ul>
-                    <li>Cinematic Film in 4K</li>
-                    <li>All Raw Photos</li>
-                    <li>Edited Photos</li>
-                    <li>3 Days Countdown</li>
-                    <li>1 Save The Date</li>
-                    <li>2 Instagram Reels</li>
-                </ul>
-
-            </div>
-
-
-            <div class="package-card">
-
-                <h3>Platinum</h3>
-
-                <div class="price">₹35,000</div>
-
-                <ul>
-                    <li>Cinematic Story-Based Film in 4K</li>
-                    <li>All Raw Photos</li>
-                    <li>Edited Photos</li>
-                    <li>3 Days Countdown</li>
-                    <li>1 Save The Date</li>
-                    <li>2 Instagram Reels</li>
-                    <li>Drone Shoot</li>
-                    <li>1 Mini Photobook</li>
-                </ul>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- DELIVERABLES -->
-
-    <section class="deliverables" id="deliverables">
-
-        <div class="section-title">
-
-            <small>WHAT YOU GET</small>
-
-            <h2>Premium Deliverables</h2>
+            <h3>
+                Cinematic Videography
+            </h3>
 
             <p>
-                Carefully selected deliverables to preserve your memories.
+                Cinematic films and beautiful wedding highlights.
             </p>
 
         </div>
 
 
-        <div class="deliverable-container">
+        <div class="service">
 
-
-            <div class="deliverable-card">
-
-                <h3>Silver</h3>
-                <h4>ESSENTIAL LUXURY</h4>
-
-                <p>✓ E-Invitation</p>
-                <p>✓ Edited Photos</p>
-                <p>✓ Traditional Highlight</p>
-                <p>✓ Full Videos</p>
-                <p>✓ 12x18 Frame</p>
-                <p>✓ 64GB Pendrive</p>
-                <p>✓ 35 Sheets Album</p>
-
+            <div class="service-icon">
+                ❤️
             </div>
 
-
-            <div class="deliverable-card">
-
-                <h3>Gold</h3>
-                <h4>SIGNATURE LUXURY</h4>
-
-                <p>✓ E-Invitation</p>
-                <p>✓ Edited Photos</p>
-                <p>✓ Teaser & Highlight</p>
-                <p>✓ Full Videos</p>
-                <p>✓ 16x24 Frame</p>
-                <p>✓ 64GB Pendrive</p>
-                <p>✓ 40 Sheets Album</p>
-                <p>✓ Mini Album & Calendar</p>
-
-            </div>
-
-
-            <div class="deliverable-card">
-
-                <h3>Platinum</h3>
-                <h4>ROYAL LUXURY</h4>
-
-                <p>✓ E-Invitation</p>
-                <p>✓ Instagram Reels</p>
-                <p>✓ Edited Photos</p>
-                <p>✓ Teaser & Highlight</p>
-                <p>✓ Full Videos</p>
-                <p>✓ 20x30 Frame</p>
-                <p>✓ 64GB Pendrive</p>
-                <p>✓ 50 Sheets Album</p>
-                <p>✓ Mini Album & Calendar</p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- WHY US -->
-
-    <section class="why">
-
-        <div class="section-title">
-
-            <small>THE EXPERIENCE</small>
-
-            <h2>Why Choose Us?</h2>
-
-        </div>
-
-
-        <div class="why-container">
-
-            <div class="why-card">
-
-                <div class="why-icon">📸</div>
-
-                <h3>Candid Moments</h3>
-
-                <p>
-                    Natural emotions and unforgettable moments.
-                </p>
-
-            </div>
-
-
-            <div class="why-card">
-
-                <div class="why-icon">🎥</div>
-
-                <h3>Cinematic Films</h3>
-
-                <p>
-                    Creative films that bring your story to life.
-                </p>
-
-            </div>
-
-
-            <div class="why-card">
-
-                <div class="why-icon">💍</div>
-
-                <h3>Wedding Stories</h3>
-
-                <p>
-                    Every important moment captured beautifully.
-                </p>
-
-            </div>
-
-
-            <div class="why-card">
-
-                <div class="why-icon">✨</div>
-
-                <h3>Premium Memories</h3>
-
-                <p>
-                    Quality photographs and memorable deliverables.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section class="contact" id="contact">
-
-        <div class="section-title">
-
-            <small>LET'S CREATE MEMORIES</small>
-
-            <h2>Book Your Shoot</h2>
+            <h3>
+                Candid Photography
+            </h3>
 
             <p>
-                Contact us for customized wedding and photography packages.
+                Natural and emotional moments captured beautifully.
             </p>
 
         </div>
 
 
-        <div class="contact-container">
+        <div class="service">
 
-
-            <!-- CALL -->
-
-            <div class="contact-card">
-
-                <div class="contact-icon">📞</div>
-
-                <h3>Call Us</h3>
-
-                <p>8840688961</p>
-
-                <a href="tel:+918840688961" class="btn">
-                    Call Now
-                </a>
-
+            <div class="service-icon">
+                🚁
             </div>
 
-
-            <!-- WHATSAPP -->
-
-            <div class="contact-card">
-
-                <div class="contact-icon">💬</div>
-
-                <h3>WhatsApp</h3>
-
-                <p>Send us your requirement.</p>
-
-                <a href="https://wa.me/918840688961?text=Hi%20The%20Shutter%20Up%20Studios%2C%20I%20want%20to%20book%20a%20photography%20package."
-                    class="btn"
-                    target="_blank">
-                    WhatsApp Us
-                </a>
-
-            </div>
-
-
-            <!-- INSTAGRAM -->
-
-            <div class="contact-card">
-
-                <div class="contact-icon">📷</div>
-
-                <h3>Instagram</h3>
-
-                <p>@the_shutter_up_studios</p>
-
-                <a href="https://www.instagram.com/the_shutter_up_studios/"
-                    class="btn"
-                    target="_blank">
-                    Visit Instagram
-                </a>
-
-            </div>
-
-
-        </div>
-
-
-        <div style="text-align:center; margin-top:40px; color:#aaa;">
+            <h3>
+                Drone Shoot
+            </h3>
 
             <p>
-                📍 551GH/20M, Govind Gali, Alambagh, Lucknow
+                Aerial cinematic shots for memorable events.
             </p>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- FOOTER -->
+<!-- CONTACT -->
 
-    <footer>
+<section class="contact" id="contact">
 
-        <h3>The Shutter Up Studios</h3>
+    <div class="section-title">
 
-        <p>
-            Wedding Photography • Cinematic Films • Pre-Wedding
-        </p>
-
-        <p>
-            📍 551GH/20M, Govind Gali, Alambagh, Lucknow
-        </p>
+        <h2>Let's Create Memories</h2>
 
         <p>
-            📞 8840688961
+            Contact The Shutter Up Studios for bookings and enquiries.
         </p>
 
-        <p>
-            © 2026 The Shutter Up Studios. All Rights Reserved.
-        </p>
+    </div>
 
-    </footer>
+    <div class="contact-container">
 
 
-    <!-- FLOATING WHATSAPP -->
+        <div class="contact-card">
 
-    <a href="https://wa.me/918840688961?text=Hi%20The%20Shutter%20Up%20Studios%2C%20I%20want%20to%20know%20about%20your%20packages."
-        class="whatsapp"
-        target="_blank"
-        title="Chat on WhatsApp">
+            <h3>
+                📞 Call
+            </h3>
 
-        💬
+            <p>
+                8840688961
+            </p>
 
-    </a>
+            <a href="tel:+918840688961">
+                Call Now
+            </a>
 
+        </div>
+
+
+        <div class="contact-card">
+
+            <h3>
+                📱 WhatsApp
+            </h3>
+
+            <p>
+                Chat with us on WhatsApp.
+            </p>
+
+            <a
+                href="https://wa.me/918840688961"
+                target="_blank">
+
+                WhatsApp Us
+
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <h3>
+                📷 Instagram
+            </h3>
+
+            <p>
+                @the_shutter_up_studios
+            </p>
+
+            <a
+                href="https://www.instagram.com/the_shutter_up_studios/"
+                target="_blank">
+
+                Visit Instagram
+
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <h3>
+                📍 Address
+            </h3>
+
+            <p>
+                551GH/20M Govind Gali,
+                Alambagh, Lucknow
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 <strong>The Shutter Up Studios</strong>.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        551GH/20M Govind Gali, Alambagh, Lucknow
+    </p>
+
+</footer>
 
 </body>
-
 </html>
+```
